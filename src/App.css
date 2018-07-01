@@ -1,28 +1,166 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+body {
+  background: linear-gradient(to right, #abbaab, #ffffff);
+}
+
 .App {
-  text-align: center;
+
+  margin-top: 12px;
+  background: white;
+  display: -ms-flexbox;
+  border-radius: 10px;
+  display: flex;
+  box-shadow: 0px 2px 4px grey;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
+#root {
+    display: flex;
+  justify-content: center;
+  align-items: center;
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
+  margin-top: 80px;
+}
+img{
+  width: 100%;
+height: 100%;
+border-bottom-left-radius: 10px;
+border-top-left-radius: 10px;
+}
+.gif{
+
+  flex:0.75
+}
+.input-group{
+  flex:1;
+  justify-content: center;
+  align-items: center;
+
+
+}
+.content{
+
+
+padding:20px;
+}
+.list{
+  flex:3;
+  margin-top: 33px;
+}
+#title{
+  width: 130px;
+height: 30px;
+border:none;
+justify-content: center;
+display: flex;
+margin-bottom: 10px;
+padding:8px;
+font-size: 16px;
+box-shadow: 0px 2px #07bbff;
+font-family: 'Roboto', sans-serif;
+outline: none
+}
+#message{
+  width: 230px;
+height: 30px;
+border:none;
+justify-content: center;
+padding:8px;
+font-size: 16px;
+font-family: 'Roboto', sans-serif;
+box-shadow: 0px 2px #07bbff;
+margin-bottom: 10px;
+margin-right: 10px;
+outline:none;
+}
+#button-add{
+  font-size: 24px;
+  outline: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  margin-top: 13px;
+  background-color: #ff6666;
   color: white;
+  position: absolute;
+  top: 168px;
+  right: 290px;
 }
 
-.App-title {
-  font-size: 1.5em;
+.button-group{
+  display: flex;
+  justify-content: flex-end;
 }
-
-.App-intro {
-  font-size: large;
+.button-list{
+  width: 37px;
+  height: 20px;
 }
+.float-left{
+  float:left;
+}
+.list-item{
+  padding: 2px;
+      border-radius: 3px;
+      -webkit-box-shadow: 0px 2px 4px #808080d6;
+      border: none;
+      box-shadow: 0px 2px 4px grey;
+      background-color: #1e184214;
+      margin-bottom: 9px;
+      padding-left: 10px;
+padding-bottom: 10px;
+}
+.fa {
+  padding-right: 27px;
+  font-size: 26px;
+  color:black;
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+}
+.edit-list{
+  padding: 2px;
+      border-radius: 3px;
+      -webkit-box-shadow: 0px 2px 4px #808080d6;
+      border: none;
+      box-shadow: 0px 2px 4px grey;
+      background-color: #efefef33;
+      margin-bottom: 9px;
+      padding-left: 10px;
+padding-bottom: 10px;
+}
+.edit-input{
+  width: 130px;
+height: 30px;
+border: none;
+-ms-flex-pack: center;
+justify-content: center;
+display: -ms-flexbox;
+
+margin-bottom: 10px;
+padding: 8px;
+font-size: 16px;
+-webkit-box-shadow: 0px 2px #07bbff;
+box-shadow: 0px 2px #07bbff;
+font-family: 'Roboto', sans-serif;
+outline: none;
+padding-bottom: 25px;
+
+}
+.check{
+  float: right;
+  /* font-size: 24px; */
+  padding-top: 50px;
+
+
+}
+#date{
+  width: 200px;
+height: 30px;
+border:none;
+justify-content: center;
+display: flex;
+margin-bottom: 10px;
+padding:8px;
+font-size: 16px;
+box-shadow: 0px 2px #07bbff;
+font-family: 'Roboto', sans-serif;
+outline: none
 }

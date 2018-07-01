@@ -18,9 +18,9 @@ class Edit extends React.Component {
   }
   render() {
     return (
-      <div>
-        <input type="text" ref={input => (this.newToDo = input)} />
-        <button onClick={this.onClickHandler.bind(this)}>update</button>
+      <div className="edit-list">
+        <input type="text" className="edit-input" ref={input => (this.newToDo = input)} />
+        <i className="fa check fa-check-circle" onClick={this.onClickHandler.bind(this)}></i>
       </div>
     );
   }
