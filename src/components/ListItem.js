@@ -2,29 +2,44 @@ import React from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import "font-awesome/css/font-awesome.css";
-class ListItem extends React.Component {
-  render() {
-    let now=new Date();
-    let deadline=new Date(this.props.data.deadline);
 
-componentDidMount()=>{
-  setInterval(function(){
-    // if(now === deadline){
-    //   alert('time over',this.props.data.keyword);
-    // }
-    alert('hello');
-  },1000);
-}
+class ListItem extends React.Component {
+  componentDidMount() {
+    const timer=setInterval(() => {
+      this.checkDeadline();
+    }, 1000);
+  }
+
+  checkDeadline = () => {
+    let deadline = new Date(this.props.data.deadline);
+    let now = new Date();
+    let keyword=this.props.data.keyword;
+
+    if (
+      deadline.getFullYear() == now.getFullYear() &&
+      deadline.getMonth() == now.getMonth() &&
+      deadline.getDate() == now.getDate() &&
+      now.getHours() == deadline.getHours() &&
+      now.getMinutes() == deadline.getMinutes()
+      && now.getSeconds()==deadline.getSeconds()
+    ) {
+        return alert('timeover',keyword);
+
+    }
+  };
+  render() {
+    let deadline=new Date(this.props.data.dealine);
+
     return (
       <div className="list-item">
-        <h4>{this.props.data.message}</h4>
+        <h4>{this.props.data.keyword}</h4>
 
-        <div class="float-left">{this.props.data.keyword}</div><br/>
-          <div class="float-left">{this.props.data.deadline}</div>
+        <div class="float-left">{this.props.data.message}</div>
+        <br />
+        <div class="float-left">{Date(this.props.data.deadline).replace("GMT+0530 (India Standard Time)"," ")}</div>
 
-      <div className="button-group">
+        <div className="button-group">
           <div className="button-group">
-
             <i
               className="fa fa-trash"
               onClick={() => {
