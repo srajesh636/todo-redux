@@ -24,13 +24,14 @@ class ListItem extends React.Component {
       now.getMinutes() == deadline.getMinutes()
       && now.getSeconds()==deadline.getSeconds()
     ) {
-        return alert('timeover',keyword);
+         alert('timeover',keyword);
+          Push.create('timeover ',keyword);
 
     }
   };
   render() {
     let deadline=new Date(this.props.data.dealine);
-    Push.create('hello');
+
 
     return (
       <div className="list-item">
