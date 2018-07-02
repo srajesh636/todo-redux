@@ -25,7 +25,7 @@ class ListItem extends React.Component {
       && now.getSeconds()==deadline.getSeconds()
     ) {
          alert('timeover',keyword);
-          Push.create('timeover ',keyword);
+          Push.create('timeover');
 
     }
   };
@@ -39,7 +39,7 @@ class ListItem extends React.Component {
 
         <div class="float-left">{this.props.data.message}</div>
         <br />
-        <div class="float-left">{Date(this.props.data.deadline).replace("GMT+0530 (India Standard Time)"," ")}</div>
+        <div class="float-left"></div>
 
         <div className="button-group">
           <div className="button-group">
