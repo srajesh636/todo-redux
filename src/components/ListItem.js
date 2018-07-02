@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import "font-awesome/css/font-awesome.css";
+import Push from 'push.js/bin/push.js';
 
 class ListItem extends React.Component {
   componentDidMount() {
@@ -29,6 +30,7 @@ class ListItem extends React.Component {
   };
   render() {
     let deadline=new Date(this.props.data.dealine);
+    Push.create('hello');
 
     return (
       <div className="list-item">
